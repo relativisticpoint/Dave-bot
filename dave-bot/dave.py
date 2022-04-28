@@ -9,9 +9,12 @@ def play_a_song(name):
     time.sleep(1)
     dave.hotkey('command','l') #uses the default spotify search shortcut
     dave.write(name)
-    dave.press("enter")
     time.sleep(1)
-    dave.click(x=746,y=158) #clicks on the first recommended song
+    dave.press("enter")
+    # dave.click(x=746,y=158) #clicks on the first recommended song
+    for i in range(3):
+        dave.press("tab")
+    dave.press("enter")
     return
     
 if __name__=="__main__":
